@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ejercicioTwitter">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <script src="lib/angular/angular.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div ng-controller="Main" style="padding-top:40px">
+            <div class="well clearfix">
+                <textarea name="" id="" cols="5" rows="5" class="form-control" ng-model="text"></textarea>
+                <br>
+                <span>{{getChars()}}</span>
+                <button class="js-tweet-button btn btn-primary float-right" ng-disabled="!text || getChars() < 1">Tweet</button>
+                <button class="js-add-photo-button btn btn-info float-right" ng-click="isPhoto =!isPhoto">{{getPhotoText()}}</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
